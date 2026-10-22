@@ -33,8 +33,8 @@ dependencies {
 
 | 항목 | 확인된 범위 |
 |---|---|
-| Spring Boot | 3.2.0 (스타터로 검증), 3.3.6 (동일한 필터·CSS를 직접 구현해 검증) |
-| springdoc-openapi | 2.1.0 (스타터로 검증), 2.6.0 (동일한 필터·CSS를 직접 구현해 검증) |
+| Spring Boot | 3.2.0, 3.3.6 |
+| springdoc-openapi | 2.1.0, 2.6.0 (Swagger UI 5.x) |
 | Java | 17 이상 |
 | 웹 스택 | Servlet(Spring MVC)만 지원, WebFlux는 미지원 |
 
