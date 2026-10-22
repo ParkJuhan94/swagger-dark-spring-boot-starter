@@ -1,5 +1,22 @@
 # swagger-dark-spring-boot-starter
 
+> **⚠️ 이 프로젝트는 더 이상 유지하지 않습니다.**
+> Swagger UI **5.31.0**부터 공식 다크모드(상단 토글 버튼)가 생겨 이 스타터가 필요 없어졌습니다.
+> springdoc이 번들한 UI가 그보다 낮다면, 웹자르만 올려서 공식 다크모드를 쓰세요.
+>
+> ```gradle
+> implementation 'org.webjars:swagger-ui:5.32.14'
+> ```
+>
+> ```yaml
+> springdoc:
+>   swagger-ui:
+>     version: 5.32.14   # 웹자르만 올리면 springdoc이 옛 경로를 찾아 404가 나므로 함께 지정
+> ```
+>
+> springdoc 2.6.0(Spring Boot 3.3.6), 2.1.0(Spring Boot 3.2.0)에서 이 방식으로 동작을 확인했습니다.
+> springdoc 2.9.x로 전체를 올리는 방법은 Spring 6.2(Spring Boot 3.4 이상)가 전제입니다.
+
 Swagger UI(springdoc-openapi)에 다크 테마를 입히는 Spring Boot 스타터입니다. 의존성 한 줄이면 적용되고, 별도 설정이 필요 없습니다.
 
 - 배경 `#161e2d` 네이비 계열, GET/POST/PUT/DELETE 등 메서드별 박스 색은 어두운 배경에서도 구분되도록 채도를 올렸습니다.
