@@ -1,0 +1,44 @@
+plugins {
+    id 'java-library'
+    id 'maven-publish'
+}
+
+group = 'com.github.ParkJuhan94'
+version = '0.1.0'
+
+java {
+    // 사용처(Spring Boot 3.x)가 Java 17 이상이므로 17 바이트코드로 낮춰 배포한다
+    sourceCompatibility = '17'
+    targetCompatibility = '17'
+    withSourcesJar()
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // 버전은 사용처의 Spring Boot가 정하도록 컴파일 시점 기준 BOM만 참조한다
+    compileOnly platform('org.springframework.boot:spring-boot-dependencies:3.2.0')
+    compileOnly 'org.springframework.boot:spring-boot-autoconfigure'
+    compileOnly 'org.springframework:spring-web'
+    compileOnly 'jakarta.servlet:jakarta.servlet-api'
+    annotationProcessor platform('org.springframework.boot:spring-boot-dependencies:3.2.0')
+    annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
+
+    testImplementation platform('org.springframework.boot:spring-boot-dependencies:3.2.0')
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testImplementation 'org.springframework.boot:spring-boot-starter-web'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            from components.java
+        }
+    }
+}
