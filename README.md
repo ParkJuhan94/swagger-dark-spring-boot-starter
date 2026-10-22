@@ -18,7 +18,7 @@ repositories {
 
 dependencies {
     implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.x'
-    implementation 'com.github.ParkJuhan94:swagger-dark-spring-boot-starter:0.1.0'
+    implementation 'com.github.ParkJuhan94:swagger-dark-spring-boot-starter:v0.1.0'
 }
 ```
 
